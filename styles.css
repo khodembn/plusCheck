@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light;
+  --bg: #ffff;
+  --surface: #e0f6e4;
+  --text: #0a2114;
+  --muted: #5d875e;
+  --primary: #03800e;
+  --border: #88e089;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+
+  margin: 0;
+  font-family: "Vazirmatn", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.site-header {
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav {
+  min-height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand,
+.nav-link,
+.button {
+  text-decoration: none;
+}
+
+.brand {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.nav-link {
+  color: var(--muted);
+}
+
+.hero {
+  padding: 72px 0 48px;
+}
+
+.eyebrow {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.hero h1 {
+  max-width: 720px;
+  font-size: 48px;
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+.hero-text {
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.9;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+}
+
+.features {
+  padding: 32px 0 72px;
+}
+
+.cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1 1 240px;
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #eff6ff;
+  color: var(--primary);
+  font-weight: 800;
+}
+
+.card p {
+  color: var(--muted);
+  line-height: 1.8;
+}
