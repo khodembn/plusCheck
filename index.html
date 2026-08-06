@@ -13,44 +13,76 @@
 
 <body>
   <header class="site-header">
-    <nav class="nav container">
-      <a class="brand" href="#">PulseCheck</a>
-      <a class="nav-link" href="#features">ویژگی‌ها</a>
-    </nav>
+    <div class="container header-content">
+      <strong class="logo">PulseCheck</strong>
+      <nav>
+        <a href="#home">خانه</a>
+        <a href="#mood">ثبت حال</a>
+        <a href="#features">ویژگی‌ها</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <section class="hero container">
-      <p class="eyebrow">همراه تیم، هر روز بهتر</p>
-      <h1>حال تیم خود را بهتر بشناسید</h1>
-      <p class="hero-text">
-        PulseCheck به اعضای تیم کمک می‌کند وضعیت روزانه خود را ثبت کنند و مدیران با یک نگاه، تصویر
-        کلی از حال و انرژی تیم را ببینند. </p>
-      <a class="button" href="#features">دیدن ویژگی‌ها</a>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">همراه تیم، هر روز بهتر</p>
+          <h1>حال تیم خود را بهتر بشناسید</h1>
+          <p class="hero-text">
+            PulseCheck به اعضای تیم کمک می‌کند وضعیت روزانه خود را ثبت کنند و مدیران با یک نگاه، تصویر
+            کلی از حال و انرژی تیم را ببینند. </p>
+          <a class="button" href="#features">دیدن امکانات</a>
+        </div>
+        <div class="hero-card">
+          <span>میانگین امروز</span>
+          <strong>4.2 از 5</strong>
+          <p>وضعیت کلی تیم خوب است.</p>
+        </div>
+      </div>
     </section>
 
-    <section id="features" class="features container">
-      <h2></h2>
+    <section id="features" class="section">
+      <div class="container">
+        <h2>امکانات</h2>
 
-      <div class="cards">
-        <article class="card">
-          <div class="icon" aria-hidden="true">😊</div>
-          <h3>ثبت وضعیت روزانه</h3>
-          <p>اعضای تیم می‌توانند احساس و میزان انرژی خود را تنها در چند ثانیه ثبت کنند.</p>
-        </article>
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">😊</div>
+            <h3>ثبت وضعیت روزانه</h3>
+            <p>
+              اعضای تیم می‌توانند میزان حال و انرژی روزانه خود را از ۱ تا ۵ ثبت کنند و وضعیت کاری خود را به‌سادگی به
+              اشتراک بگذارند.
+            </p>
+          </article>
 
-        <article class="card">
-          <div class="icon" aria-hidden="true">📈</div>
-          <h3>گزارش تیم</h3>
-          <p>مدیران می توانند روند کلی وضعیت تیم را با گزارش ها و امار های ساده مشاهده کنند.</p>
-        </article>
+          <article class="card">
+            <div class="icon" aria-hidden="true">📊</div>
+            <h3>گزارش وضعیت تیم</h3>
+            <p>
+              مدیران می‌توانند میانگین وضعیت تیم را مشاهده کنند و با یک نگاه، میزان رضایت و انرژی کلی اعضا را بررسی
+              کنند.
+            </p>
+          </article>
 
-        <article class="card">
-          <div class="icon" aria-hidden="true">💡</div>
-          <h3> پیشنهاد های روزانه</h3>
-          <p>بر اساس وضعیت ثبت‌شده، پیشنهادهای کاربردی برای افزایش تمرکز، انگیزه و سلامت تیم ارائه می‌شود.</p>
-        </article>
-        <!-- TODO: یک کارت ویژگی جدید اضافه کن -->
+          <article class="card">
+            <div class="icon" aria-hidden="true">💡</div>
+            <h3>پیشنهادهای کاربردی</h3>
+            <p>
+              بر اساس وضعیت ثبت‌شده، پیشنهادهایی برای بهبود تمرکز، کاهش فشار کاری و افزایش انگیزه تیم ارائه می‌شود.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">📈</div>
+            <h3>تاریخچه عملکرد</h3>
+            <p>
+              هر عضو تیم می‌تواند تغییرات وضعیت خود را در طول زمان مشاهده کند و روند بهبود یا تغییرات انرژی خود را بررسی
+              کند.
+            </p>
+          </article>
+
+        </div>
       </div>
     </section>
   </main>
