@@ -160,7 +160,7 @@ nav a:hover {
 
 .section-text {
   max-width: 800px;
-  margin: 0 auto 16px;
+  margin: 0 0 16px;
   color: var(--muted);
   font-size: 18px;
   line-height: 2;
