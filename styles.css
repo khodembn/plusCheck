@@ -245,6 +245,183 @@ nav a:hover {
 }
 
 
+
+.team-overview {
+  padding-top: 80px;
+}
+
+.overview-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+
+.overview-text {
+  text-align: right;
+}
+
+.overview-text h2 {
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  margin: 12px 0 20px;
+}
+
+.overview-text p {
+  color: var(--muted);
+  line-height: 2;
+  font-size: 18px;
+  max-width: 520px;
+}
+
+
+.team-card {
+  background: linear-gradient(145deg,
+      #FFFFFF 0%,
+      #F8FAFF 55%,
+      #EEF3FF 100%);
+
+  border: 1px solid var(--border);
+  border-radius: 28px;
+  padding: 32px;
+
+  box-shadow:
+    0 20px 50px rgba(91, 95, 239, .10);
+
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -90px;
+  right: -70px;
+
+  border-radius: 50%;
+
+  background: rgba(91, 95, 239, .08);
+
+  filter: blur(30px);
+}
+
+.team-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.team-card-header h3 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.team-card-header span {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+
+
+.team-score {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.team-score strong {
+  font-size: 48px;
+  color: var(--primary);
+}
+
+.team-score span {
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.score-bar {
+  width: 100%;
+  height: 8px;
+
+  background: var(--primary-light);
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  margin-bottom: 28px;
+}
+
+.score-progress {
+  width: 84%;
+  height: 100%;
+
+  background: linear-gradient(90deg,
+      var(--primary),
+      var(--accent));
+
+  border-radius: inherit;
+}
+
+
+.mood-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mood-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mood-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: var(--text);
+}
+
+.mood-name span:first-child {
+  font-size: 22px;
+}
+
+.mood-row strong {
+  color: var(--text);
+}
+
+
+
+.team-trend {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-top: 28px;
+  padding-top: 20px;
+
+  border-top: 1px solid var(--border);
+}
+
+.team-trend span {
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.team-trend p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+
 .problem {
   background: var(--background);
   text-align: right;
@@ -438,6 +615,25 @@ nav a:hover {
     gap: 32px;
 
     text-align: right;
+  }
+
+
+
+  .overview-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .overview-text {
+    text-align: right;
+  }
+
+  .team-card {
+    padding: 24px;
+  }
+
+  .team-score strong {
+    font-size: 40px;
   }
 
 }
