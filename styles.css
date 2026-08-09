@@ -265,10 +265,7 @@ nav a:hover {
 }
 
 .start {
-  background: linear-gradient(180deg,
-      #F5F8FF 0%,
-      #EEF0FF 50%,
-      #E0E7FF 100%);
+  background: var(--background)
 }
 
 .start-card {
@@ -302,6 +299,80 @@ nav a:hover {
 .start-card .button:hover {
   transform: translateY(-3px);
 }
+
+.footer {
+
+  background: linear-gradient(180deg,
+      #F5F8FF 0%,
+      #EEF0FF 50%,
+      #E0E7FF 100%);
+
+  margin-top: 0;
+}
+
+.footer-grid {
+
+  display: grid;
+
+  grid-template-columns: 2fr 1fr 1fr;
+
+  gap: 48px;
+
+  padding: 56px 0;
+}
+
+.footer h3,
+.footer h4 {
+
+  margin-bottom: 16px;
+}
+
+.footer p {
+
+  color: var(--muted);
+
+  line-height: 1.9;
+}
+
+.footer-links,
+.footer-contact {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.footer a {
+
+  color: var(--muted);
+
+  text-decoration: none;
+
+  transition: .3s ease;
+}
+
+.footer a:hover {
+
+  color: var(--primary);
+
+  transform: translateY(-2px);
+}
+
+.footer-bottom {
+
+  border-top: 1px solid var(--border);
+
+  text-align: center;
+
+  padding: 24px 0;
+
+  color: var(--muted);
+
+  font-size: .95rem;
+}
+
 
 @media (max-width: 700px) {
 
@@ -358,6 +429,15 @@ nav a:hover {
   .how-box {
 
     padding: 36px 24px;
+  }
+
+  .footer-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 32px;
+
+    text-align: right;
   }
 
 }
