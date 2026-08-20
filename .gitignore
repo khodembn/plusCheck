@@ -1,4 +1,33 @@
 *.zip
 *.txt
 .vscode/
-node_modules/
+node_modules/*.zip
+*.txt
+.vscode/
+
+
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+
+# Environment variables
+.env
+
+# IDE
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+PlusCheck/.git-backup/

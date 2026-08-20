@@ -1,0 +1,295 @@
+{% load static %}
+
+<!doctype html>
+<html lang="fa" dir="rtl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseCheck</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{% static 'core/styles.css' %}">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <strong class="logo">PulseCheck</strong>
+      <nav>
+        <a href="/">خانه</a>
+        <a href="/about">درباره ما</a>
+        <a href="#features">ویژگی‌ها</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">همراه تیم، هر روز بهتر</p>
+          <h1>حال تیم خود را بهتر بشناسید</h1>
+          <p class="hero-text">
+            PulseCheck به اعضای تیم کمک می‌کند وضعیت روزانه خود را ثبت کنند و مدیران با یک نگاه، تصویر
+            کلی از حال و انرژی تیم را ببینند. </p>
+          <a class="button" href="#features">دیدن امکانات</a>
+        </div>
+        <div class="hero-card">
+          <span>میانگین امروز</span>
+          <strong>4.2 از 5</strong>
+          <p>وضعیت کلی تیم خوب است.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="container">
+        <h2>امکانات</h2>
+
+        <div class="cards">
+          <article class="card">
+            <div class="icon" aria-hidden="true">😊</div>
+            <h3>ثبت وضعیت روزانه</h3>
+            <p>
+              اعضای تیم می‌توانند میزان حال و انرژی روزانه خود را از ۱ تا ۵ ثبت کنند و وضعیت کاری خود را به‌سادگی به
+              اشتراک بگذارند.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">📊</div>
+            <h3>گزارش وضعیت تیم</h3>
+            <p>
+              مدیران می‌توانند میانگین وضعیت تیم را مشاهده کنند و با یک نگاه، میزان رضایت و انرژی کلی اعضا را بررسی
+              کنند.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">💡</div>
+            <h3>پیشنهادهای کاربردی</h3>
+            <p>
+              بر اساس وضعیت ثبت‌شده، پیشنهادهایی برای بهبود تمرکز، کاهش فشار کاری و افزایش انگیزه تیم ارائه می‌شود.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="icon" aria-hidden="true">📈</div>
+            <h3>تاریخچه عملکرد</h3>
+            <p>
+              هر عضو تیم می‌تواند تغییرات وضعیت خود را در طول زمان مشاهده کند و روند بهبود یا تغییرات انرژی خود را بررسی
+              کند.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section how-it-works">
+
+      <div class="container">
+
+        <div class="how-box">
+
+          <h2>چگونه PulseCheck کار می‌کند؟</h2>
+
+          <p class="section-text">
+            تنها در چند ثانیه، وضعیت روزانه ثبت می‌شود و PulseCheck با تحلیل اطلاعات،
+            دیدی روشن از وضعیت تیم در اختیار شما قرار می‌دهد.
+          </p>
+
+          <div class="steps">
+
+            <div class="step">
+              <div class="step-icon">😊</div>
+              <h3>ثبت حال</h3>
+              <p>
+                اعضای تیم حال و میزان انرژی روزانه خود را از ۱ تا ۵ ثبت می‌کنند.
+              </p>
+            </div>
+
+            <div class="step-arrow">←</div>
+
+            <div class="step">
+              <div class="step-icon">📊</div>
+              <h3>تحلیل وضعیت</h3>
+              <p>
+                میانگین و روند تغییرات به‌صورت خودکار محاسبه و نمایش داده می‌شود.
+              </p>
+            </div>
+
+            <div class="step-arrow">←</div>
+
+            <div class="step">
+              <div class="step-icon">🚀</div>
+              <h3>تصمیم بهتر</h3>
+              <p>
+                مدیران با اطلاعات دقیق‌تر، سریع‌تر مشکلات را شناسایی و تصمیم‌گیری می‌کنند.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <section class="team-overview section">
+      <div class="container">
+
+        <div class="overview-content">
+
+          <div class="overview-text">
+            <span class="eyebrow">یک نگاه به وضعیت تیم</span>
+
+            <h2>وضعیت تیم را در یک نگاه ببینید</h2>
+
+            <p>
+              PulseCheck اطلاعات ثبت‌شده اعضای تیم را به یک تصویر ساده و قابل‌فهم
+              تبدیل می‌کند تا بتوانید وضعیت کلی تیم را بهتر درک کنید.
+            </p>
+          </div>
+
+          <div class="team-card">
+
+            <div class="team-card-header">
+              <h3>وضعیت تیم</h3>
+              <span>این هفته</span>
+            </div>
+
+            <div class="team-score">
+              <strong>4.2</strong>
+              <span>/ 5</span>
+            </div>
+
+            <div class="score-bar">
+              <div class="score-progress"></div>
+            </div>
+
+            <div class="mood-list">
+
+              <div class="mood-row">
+                <div class="mood-name">
+                  <span>😊</span>
+                  <span>انرژی خوب</span>
+                </div>
+                <strong>62%</strong>
+              </div>
+
+              <div class="mood-row">
+                <div class="mood-name">
+                  <span>🙂</span>
+                  <span>معمولی</span>
+                </div>
+                <strong>28%</strong>
+              </div>
+
+              <div class="mood-row">
+                <div class="mood-name">
+                  <span>😔</span>
+                  <span>نیاز به توجه</span>
+                </div>
+                <strong>10%</strong>
+              </div>
+
+            </div>
+
+            <div class="team-trend">
+              <span>↗</span>
+              <p>وضعیت تیم نسبت به هفته قبل بهتر شده است.</p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+    <section class="section problem">
+      <div class="container">
+        <h2>مسئله‌ای که PulseCheck حل می‌کند</h2>
+
+        <p class="section-text">
+          در بسیاری از تیم‌ها، وضعیت واقعی اعضا به‌موقع دیده نمی‌شود.
+          کاهش انرژی، فشار کاری یا افت انگیزه ممکن است قبل از اینکه به یک مشکل جدی تبدیل شود،
+          قابل شناسایی باشد.
+        </p>
+
+        <p class="section-text">
+          PulseCheck کمک می‌کند تیم‌ها با ثبت منظم وضعیت روزانه،
+          شناخت بهتری از شرایط خود داشته باشند و برای ایجاد محیط کاری بهتر تصمیم بگیرند.
+        </p>
+      </div>
+    </section>
+
+    <section class="section start">
+      <div class="container">
+        <div class="start-card">
+
+          <h2>آماده‌اید حال تیم خود را بهتر بشناسید؟</h2>
+
+          <p>
+            فقط چند ثانیه زمان لازم است تا وضعیت امروز خود را ثبت کنید
+            و به ساختن تیمی آگاه‌تر و سالم‌تر کمک کنید.
+          </p>
+
+          <a class="button" href="#">
+            شروع ثبت حال
+          </a>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+
+        <h3>PulseCheck</h3>
+
+        <p>
+          راهکاری ساده برای ثبت وضعیت روزانه اعضای تیم و تصمیم‌گیری آگاهانه‌تر.
+        </p>
+
+      </div>
+
+      <div class="footer-links">
+
+        <h4>دسترسی سریع</h4>
+
+        <a href="#">خانه</a>
+        <a href="#features">امکانات</a>
+        <a href="#how">چگونه کار می‌کند</a>
+
+      </div>
+
+      <div class="footer-contact">
+
+        <h4>ارتباط</h4>
+
+        <a href="#">GitHub</a>
+        <a href="#">Email</a>
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>© 2026 PulseCheck. All rights reserved.</p>
+    </div>
+
+  </footer>
+</body>
+
+</html>
