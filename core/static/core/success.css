@@ -1,0 +1,198 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+   font-family: "Vazirmatn", sans-serif;
+    background: #f5f7fb;
+    color: #1f2937;
+}
+
+.container {
+    width: min(90%, 600px);
+    margin: 60px auto;
+}
+
+.card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Success */
+
+.success {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.success-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.success h1 {
+    margin: 0 0 10px;
+    font-size: 28px;
+    color: #1f2937;
+}
+
+.success p {
+    color: #6b7280;
+    line-height: 1.8;
+}
+
+
+/* Mood Information */
+
+.mood-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.info-box {
+    background: #f8fafc;
+    border-radius: 12px;
+    padding: 18px;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+}
+
+.info-box span {
+    display: block;
+    color: #6b7280;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.info-box strong {
+    font-size: 24px;
+    color: #4f46e5;
+}
+
+
+/* Message */
+
+.message {
+    background: #eef2ff;
+    border: 1px solid #c7d2fe;
+    border-radius: 12px;
+    padding: 18px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.message strong {
+    color: #4f46e5;
+}
+
+.message p {
+    margin: 8px 0 0;
+    color: #374151;
+}
+
+
+/* Support */
+
+.support {
+    background: #fff7ed;
+    border: 1px solid #fed7aa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 24px;
+    line-height: 1.8;
+}
+
+.support h3 {
+    margin: 0 0 10px;
+    color: #ea580c;
+}
+
+.support p {
+    margin: 8px 0;
+    color: #4b5563;
+}
+
+.phone {
+    direction: ltr;
+    display: inline-block;
+    margin-top: 5px;
+    font-weight: bold;
+    color: #ea580c;
+    text-decoration: none;
+}
+
+.phone:hover {
+    text-decoration: underline;
+}
+
+
+/* Buttons */
+
+.actions {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+}
+
+.button {
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 10px;
+    background: #4f46e5;
+    color: #ffffff;
+    transition: 0.2s;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #4338ca;
+}
+
+.button.secondary {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+.button.secondary:hover {
+    background: #d1d5db;
+}
+
+
+/* Mobile */
+
+@media (max-width: 500px) {
+
+    .container {
+        width: 92%;
+        margin: 30px auto;
+    }
+
+    .card {
+        padding: 22px;
+        border-radius: 14px;
+    }
+
+    .success h1 {
+        font-size: 24px;
+    }
+
+    .mood-info {
+        grid-template-columns: 1fr;
+    }
+
+    .actions {
+        flex-direction: column;
+    }
+
+    .button {
+        text-align: center;
+        width: 100%;
+    }
+}

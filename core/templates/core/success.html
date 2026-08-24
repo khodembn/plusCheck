@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ثبت موفقیت‌آمیز | PulseCheck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'core/success.css' %}">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <section class="card">
+
+            <div class="success">
+                <div class="success-icon">🎉</div>
+
+                <h1>ثبت موفقیت‌آمیز بود</h1>
+
+                <p>
+                    حال امروز شما با موفقیت ثبت شد.
+                </p>
+            </div>
+
+            <div class="mood-info">
+
+                <div class="info-box">
+                    <span>امتیاز حال</span>
+                    <strong>{{ mood.score }}</strong>
+                </div>
+
+                <div class="info-box">
+                    <span>میزان انرژی</span>
+                    <strong>{{ mood.energy_level }}</strong>
+                </div>
+
+            </div>
+
+            <div class="message">
+                <strong>پیام امروز:</strong>
+
+                <p>
+                    {{ message }}
+                </p>
+            </div>
+
+            {% if feedback.show_support %}
+
+                <div class="support">
+
+                    <h3>💙 یک پیشنهاد برای شما</h3>
+
+                    <p>
+                        {{ feedback.message }}
+                    </p>
+
+                    <p>
+                    می‌ تونی با مشاور تماس بگیری:
+                    </p>
+
+                    <a href="tel:{{ feedback.counselor_phone }}" class="phone">
+                        {{ feedback.counselor_phone }}
+                    </a>
+
+                </div>
+
+            {% endif %}
+
+            <div class="actions">
+
+                <a class="button" href="{% url 'get_form' %}">
+                    ثبت حال جدید
+                </a>
+
+                <a class="button secondary" href="/">
+                    خانه
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

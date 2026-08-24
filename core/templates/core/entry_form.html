@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <title>Mood Entry</title>
+</head>
+<body>
+
+    <h1>ثبت حال امروز</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ django_form.as_p }}
+
+        <button type="submit">
+            ثبت
+        </button>
+    </form>
+
+</body>
+</html>
