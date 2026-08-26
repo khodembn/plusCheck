@@ -1,21 +1,13 @@
-{% load static %}
-
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>About - PulseCheck</title>
-      <link rel="stylesheet" href="{% static 'core/styles.css' %}">
-</head>
-<body>
-
-    <h1>درباره PulseCheck</h1>
-
+{% extends "base.html" %}
+{% block title %}درباره ماPulseCheck{% endblock %}
+{% block content %}
+   <h1>درباره PulseCheck</h1>
     <p>
         PulseCheck یک پروژه برای ثبت و بررسی حال روزانه اعضای تیم است.
     </p>
+    
+{% endblock %}
 
-    <a href="/">Home</a>
-
-</body>
-</html>
+{% block footer%}
+<p>this is footer </p>
+{% endblock %}
