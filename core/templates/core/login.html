@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+{% block title %}ورود | PulseCheck{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+
+<div class="auth-card">
+
+    <h1>ورود به PulseCheck</h1>
+
+    <p class="auth-description">
+        برای ادامه وارد حساب کاربری خودت شو.
+    </p>
+
+    {% if error %}
+        <div class="form-errors">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <form method="POST" class="auth-form">
+
+        {% csrf_token %}
+
+        <div class="form-group">
+            <label for="username">
+                نام کاربری
+            </label>
+
+            <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="نام کاربری خود را وارد کنید"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="password">
+                رمز عبور
+            </label>
+
+            <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="رمز عبور خود را وارد کنید"
+                required
+            >
+        </div>
+
+        <button type="submit" class="auth-button">
+            ورود
+        </button>
+
+    </form>
+
+    <p class="auth-footer">
+        حساب کاربری نداری؟
+        <a href="{% url 'register' %}">
+            ثبت‌نام کن
+        </a>
+    </p>
+
+</div>
+
+
+</section>
+
+{% endblock %}

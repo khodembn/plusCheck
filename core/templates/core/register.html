@@ -1,0 +1,105 @@
+{% extends "base.html" %}
+
+{% block title %}ثبت‌نام | PulseCheck{% endblock %}
+
+{% block content %}
+
+<section class="auth-page">
+
+<div class="auth-card">
+
+    <h1>ساخت حساب کاربری</h1>
+
+    <p class="auth-description">
+        برای استفاده از PulseCheck حساب کاربری خودت را بساز
+    </p>
+
+    <form method="POST" class="auth-form">
+
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+            <div class="form-errors">
+                {{ form.non_field_errors }}
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <label for="{{ form.first_name.id_for_label }}">
+                نام
+            </label>
+
+            {{ form.first_name }}
+
+            {{ form.first_name.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.last_name.id_for_label }}">
+                نام خانوادگی
+            </label>
+
+            {{ form.last_name }}
+
+            {{ form.last_name.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.username.id_for_label }}">
+                نام کاربری
+            </label>
+
+            {{ form.username }}
+
+            {{ form.username.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.email.id_for_label }}">
+                ایمیل
+            </label>
+
+            {{ form.email }}
+
+            {{ form.email.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password1.id_for_label }}">
+                رمز عبور
+            </label>
+
+            {{ form.password1 }}
+
+            {{ form.password1.errors }}
+        </div>
+
+        <div class="form-group">
+            <label for="{{ form.password2.id_for_label }}">
+                تکرار رمز عبور
+            </label>
+
+            {{ form.password2 }}
+
+            {{ form.password2.errors }}
+        </div>
+
+        <button type="submit" class="auth-button">
+            ثبت‌نام
+        </button>
+
+    </form>
+
+    <p class="auth-footer">
+        قبلاً حساب ساخته‌ای؟
+        <a href="{% url 'login' %}">
+            وارد شو
+        </a>
+    </p>
+
+</div>
+
+
+</section>
+
+{% endblock %}

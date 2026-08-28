@@ -10,8 +10,43 @@
 <body>
   <header class="site-header">
     <strong>PulseCheck</strong>
-    <nav><a href="/">خانه</a> <a href="/about/">درباره</a> <a href="/check-in/">ثبت حال امروز</a> <a href="/report/">گزارش</a></nav>
-    <div class="auth-area"></div>
+    
+    <nav>
+      <a href="{% url 'home' %}">خانه</a> 
+      <a href="{% url 'about' %}">درباره</a>
+       <a href="{% url 'get_form' %}">ثبت حال امروز</a>
+        <a href="{% url 'report' %}">گزارش</a>
+      
+      </nav>
+    
+    <div class="auth-area">
+
+      {% if user.is_authenticated %}
+
+    <span class="welcome-user">
+        سلام، {{ user.first_name|default:user.username }} 👋
+    </span>
+
+    <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+        <button type="submit" class="logout-link">
+            خروج
+        </button>
+    </form>
+
+{% else %}
+    <span class="guest-user"> شما وارد نشده‌اید </span>
+
+    <a href="{% url 'login' %}" class="login-link">
+        ورود
+    </a>
+
+    <a href="{% url 'register' %}" class="register-link">
+        ثبت‌نام
+    </a>
+
+{% endif %}
+    </div>
   </header>
   <main class="container">
     {% block content %}{% endblock %}

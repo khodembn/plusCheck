@@ -1,11 +1,14 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
-from .forms import MoodEntryForm
+from .forms import MoodEntryForm, RegisterForm
 from .models import MoodEntry
 from .mood_messages import MOOD_MESSAGES
 from .mood_feedback import get_mood_feedback
 from django.db.models import Avg
+
+from django.contrib.auth import login
+from django.contrib.auth.decorators import login_required
 
 def home(request):
     return render(request, "core/home.html")
@@ -13,12 +16,39 @@ def home(request):
 def about(request):
     return render(request, "core/about.html")
 
+def register_view(request):
+
+    if request.user.is_authenticated:
+        return redirect("home")
+
+    if request.method == "POST":
+        form = RegisterForm(request.POST)
+
+        if form.is_valid():
+            user = form.save()
+
+            login(request, user)
+
+            return redirect("home")
+
+    else:
+        form = RegisterForm()
+
+    return render(
+        request,
+        "core/register.html",
+        {"form": form}
+    )
+
+@login_required
 def get_form(requests):
     if requests.method == 'POST':
         my_form = MoodEntryForm(requests.POST)
         
         if my_form.is_valid():
-            mood = my_form.save()
+            mood = my_form.save(commit=False)
+            mood.user = requests.user
+            mood.save()
             return redirect("success", mood_id=mood.id)
     else:
         my_form = MoodEntryForm()
@@ -31,9 +61,10 @@ def get_form(requests):
     
     
 
+@login_required
 def success(request, mood_id):
     
-    mood = MoodEntry.objects.get(id=mood_id)
+    mood = MoodEntry.objects.get(id=mood_id, user=request.user)
     message = MOOD_MESSAGES.get(mood.score)
     feedback = get_mood_feedback(mood.score)
     
@@ -48,10 +79,14 @@ def success(request, mood_id):
         
     )
     
+
+@login_required
 def report(request):
     
-    entries = MoodEntry.objects.all()
-   # entry = MoodEntry.objects.filter(score__gt=3)
+    entries = MoodEntry.objects.filter(
+        user=request.user
+    )
+   
     selected_date = request.GET.get("date")
     low_only = request.GET.get("low")
     high_energy = request.GET.get("high_energy")
